@@ -1,5 +1,8 @@
 package com.imooc.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
@@ -10,11 +13,22 @@ import java.io.Serializable;
  * @copyright: 上海英和
  * @QQ: 583760722
  */
+@Entity(name = "girl")
 public class Girl implements Serializable {
+    @Id
+    @GeneratedValue
     private Integer id;
     private String cupSize;
-
     private Integer age;
+    private Double money;
+
+    public Double getMoney() {
+        return money;
+    }
+
+    public void setMoney(Double money) {
+        this.money = money;
+    }
 
     public Integer getId() {
         return id;
